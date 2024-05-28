@@ -1,0 +1,37 @@
+name: APP 适配
+description: 请求增加适配 APP 规则
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请按照此模版填写 APP 适配规则需求信息
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: 一些验证
+      description: 在提交问题之前，请确保您完成以下操作
+      options:
+        - label: 搜索检查是否已经存在请求相同功能的问题/讨论，以避免重复创建问题
+          required: true
+        - label: 确认知晓并同意维护者直接关闭不符合 issue 规范的问题
+          required: true
+        - label: 确保提供正确的快照, 否则我同意维护者直接关闭问题
+          required: true
+        - label: 确保已阅读[#74](https://github.com/Adpro-Team/GKD_subscription/discussions/74)中的所有通知，并确认需适配的 APP 没有与它们精神相违背，否则我同意维护者直接关闭问题
+          required: true
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: |
+        请输入需要添加规则的界面的快照或者生成的链接, 也可在后面补充其它信息
+        请注意:
+        1. 不提供快照或者仅提供截图的 issue 将被自动关闭
+        2. 如果你的issue被受理，受理者提出的问题、要求，应在7日内予以回复，否则会被关闭
+      description: |
+        快照是一个 zip 文件, 快照链接是类似 "https://i.gkd.li/import/XXXXXXXX" 或 "https://i.gkd.li/i/XXXXXXXX" 的文本, 按照如下方式可获得快照信息
+
+        按照此教程 [CONTRIBUTING.md](https://github.com/Adpro-Team/GKD_subscription/blob/main/CONTRIBUTING.md) 或者下面的截图示例 来给界面打快照, 上传文件或者生成链接并粘贴到下面的输入框\
+        ![img](https://user-images.githubusercontent.com/45487685/270372181-9e05a475-6664-4e1b-adc7-1e3973fff01f.png)\
+        如果是需要多个点击如 [点击关闭按钮->出现关闭弹窗->点击关闭原因] 这种类型, 则需要填写每个点击界面的快照
+    validations:
+      required: true
